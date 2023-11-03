@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <title>Formulario</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <head></head>
+  <body>
+    <h1 id="title">Formulario de encuesta</h1>
+    <p id="description">Complete la información</p>
+    <form id="survey-form">
+      <label id="name-label">Nombre</label><input id="name" type="text" required placeholder="Ingrese su nombre"/>
+      <label id="email-label">Email</label><input id="email" type="email" required placeholder="Ingrese su email"/>
+     <label id="number-label">Edad (no obligatoria)</label> <input id="number"type="number" min="18" max="120"placeholder="Edad"/>
+     <label>Cómo nos conoció?</label>
+     <select id="dropdown">
+      <option id="1" value="internet">internet</option>
+       <option id="2" value="amigos">amigos</option>
+       </select>
+       <p>Usted trabaja actualmente en el sector informático?</p>
+      <label>Sí</label>
+       <input name="actual"value="si" id="r1" type="radio"/>
+        <label>No</label>
+        <input name="actual" value="no" id="r2"  type="radio"/>
+        <label>Tengo interés en ingresar</label>
+        <input name="actual" value="interesado" id="r3"  type="radio"/>
+       <p>Cuál es su modalidad de trabajo actual?</p>
+       <label>Remoto</label>
+       <input id="check1" value="remoto" type="checkbox"/>
+        <label>Presencial</label><input id="check2" value="presencial" type="checkbox"/>
+        <p>Tiene otros comentarios al respecto?</p>
+        <textarea id="comentarios" value="comentarios" ></textarea>
+       <button id="submit">SUBMIT</button> 
+
+      </form>
+
+
+    </body>
+
+  </html>

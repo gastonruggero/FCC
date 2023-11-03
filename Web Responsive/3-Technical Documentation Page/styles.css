@@ -1,0 +1,28 @@
+@media (min-width:800px){
+    #navbar{
+      display:block;
+     position:fixed;
+     height:100%;
+      width:200px;
+      overflow:scroll;
+      
+    }
+      
+    }
+    main{
+      position:absolute;
+      left:250px;
+      font-family:Helvetica;
+     
+    }
+    h1{
+       text-transform:uppercase;
+    }
+    
+    .nav-link{
+      display:block;
+      padding:10px;
+      border-bottom: 1px solid gray;
+    font-family:Helvetica;
+    }
+    

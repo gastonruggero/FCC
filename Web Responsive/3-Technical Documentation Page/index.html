@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>TI 99 BASIC</title>
+  </head>
+  <body>
+    <main id="main-doc">
+      <section id="convenciones"class="main-section">
+        <header><h1>CONVENCIONES</h1></header>
+        <p>Este capítulo discute el formato que deben tener los programas escritos con TI BASIC
+Extendido y la forma en que funciona este lenguaje. </p></section>
+      <section id="ejecucion_de_un_programa_de_encendido"class="main-section">
+        <header><h1>EJECUCION DE UN PROGRAMA DE ENCENDIDO</h1></header>
+        <p>Si cuando se elige TI BASIC Extendido, el programa llamado LOAD se halla en el drive 1,
+este programa se carga y se ejecuta. El efecto es el mismo que si se hubiera mecanografiado
+<code>RUN "DSK1.LOAD"</code>. Si el programa no existe habrá una pequeña demora mientras TI
+BASIC Extendido lo busca.</p></section>
+         <section id="archivos"class="main-section">
+        <header><h1>ARCHIVOS</h1></header>
+        <p>Los archivos son grupos de datos colocados en dispositivos externos. Los archivos más
+comunes están en cassettes o diskettes, pero también se consideran archivos a los datos que se
+envían a través de dispositivos externos tales como la Interfase RS232 y la impresora térmica
+opcional. 
+</p></section>
+         <section class="main-section" id="numeros_de_linea">
+        <header><h1>NUMEROS DE LINEA</h1></header>
+        <p>Los programas TI BASIC Extendido requieren números de línea.
+Los números de línea especifican el orden en que se ejecutarán las líneas y se usan para
+identificar qué línea se ejecutará, con las instrucciones <ul><code><li>IF-THEN-ELSE</li><li> GOTO GOSUB</li><li> ON
+ERROR</li><li> ON ... GOTO</li><li>ON...GOSUB</li></code></ul>. Los números de línea también pueden usarse con
+<code><ul><li>BREAK</li><li>LIST</li><li>NUM</li><li>RESTORE</li><li>RETURN</li><li>RUN</li></ul></code>. Los números de línea pueden ser
+cualquier entero desde 1 hasta 32767.
+La computadora genera automáticamente números de línea si se utiliza el comando NUM.
+Cuando no se ha indicado número de línea, el comando genera números a - partir de 100 con
+incrementos de 10 en 10. Se pueden resecuenciar los números de línea con el comando RES.</p></section>
+         <section id="lineas"class="main-section">
+        <header><h1>LINEAS</h1></header>
+        <p>Las líneas pueden tener hasta 140 caracteres de longitud incluyendo el número de línea y los
+espacios. Si ha llegado al final de la línea, los caracteres adicionales que ingrese
+reemplazarán al caracter 140° . Es posible construir una línea de más de 140 caracteres en el
+Modo Edit. usando FCTN 2 (INSERT). </p><code></code></section>
+         <section id="simbolos_especiales"class="main-section">
+        <header><h1>SIMBOLOS ESPECIALES</h1></header>
+        <p>Los símbolos especiales separan instrucciones y comentarios en una misma línea. Una línea
+de TI BASIC Extendido está formada por: un número de línea, una o más instrucciones y un
+comentario opcional.
+Por ejemplo:
+<code>100 FOR A = 1 TO 100 :: PRINT A; SQR (A) :: NEXT A! IMPRESION DE RAICES
+CUADRADAS.</code>
+El símbolo separador de instrucciones :: se usa para separar instrucciones dentro de una
+misma línea. El signo de admiración! se usa para separar un comentario explicatorio del resto
+de la línea. Los comentarios no se ejecutan cuando se ejecuta el programa. </p></section>
+   <section id="espacios"class="main-section">
+        <header><h1>ESPACIOS</h1></header><p>TI BASIC Extendido requiere espacios entre los elementos que conforman las instrucciones
+para poder distinguir los nombres de variables de los elementos del lenguaje propiamente
+dicho. Sin embargo no se requieren espacios antes o después de símbolos relacionados, o
+antes o después del símbolo !, o de un símbolo separador de instrucciones. Se pueden insertar
+espacios extra cuando se ingresan comandos e instrucciones, pero TI BASIC Extendido los
+eliminará. Cuando se listen programas, TI BASIC Extendido puede agregar espacios
+alrededor del símbolo ! o de un símbolo separador de instrucciones.</p></section>
+        <section id="constantes_numericas"class="main-section">
+        <header><h1>CONSTANTES NUMERICAS</h1></header><p>Se pueden ingresar constantes numéricas con cualquier cantidad de dígitos. Sin embargo la
+computadora las redondeará a 13 ó 14 dígitos debido al método interno de almacenamiento
+que usa. Y generalmente los mostrará con un máximo de 10 dígitos. Para números
+extremadamente grandes o pequeños, se aconseja usar notación científica para su ingreso. La
+computadora, normalmente usa este tipo de notación para imprimir números muy grandes o
+muy pequeños.
+En notación científica, un amen) se da como una mantisa (un número con un lugar a la
+izquierda del punto decimal) multiplicada p
+or 10 elevado a una potencia entera. En notación
+científica 15 se expresa como 1.5 X 101
+ . 150 se expresa como 1.5 X 102
+; - 1500 se expresa
+como - 1.5 X 103
+; 156789000000000 se expresa como 1.56789 X 1014 y 0.156789 se expresa
+como 1.56789 X 10-1 . El TI BASIC EXTENDIDO el " X 10" se representa por "E". Así 1.5 X
+103
+ se transforma en 1.5E3.
+Las constantes numéricas están definidas en el rango - 9.9999999999999E127 a - 1E – 128.0,
+y 1E - 128 a 9.9999999999999E127. Si el exponente de un número calculado es mayor que
+99, se imprimirá ** en lugar del exponente. El exponente completo se guarda internamente y
+puede mostrarse con <code>USING</code> en una instrucción <code>PRINT</code> o <code>DISPLAY</code>. </p></section>
+        <section id="constantes_alfanumericas"class="main-section">
+         <header><h1>CONSTANTES ALFANUMERICAS</h1></header><p>Las constantes alfanuméricas pueden tener hasta una longitud igual al largo de una línea de
+entrada. Si la cadena está encerrada entre comillas, las comillas que están dentro de la cadena,
+se representarán mediante doble comillas. 
+</p><code></code></section>
+ <section id="variables"class="main-section">
+         <header><h1>VARIABLES</h1></header><p>Los nombres de variable en TI BASIC Extendido pueden tener de 1 a 15 caracteres. El primer
+caracter de una variable debe ser una letra del alfabeto, el símbolo @ o una línea (-). Los
+caracteres subsiguientes pueden ser cualquiera de esos símbolos más los dígitos. El último
+caracter de una variable alfanumérica debe ser siempre un signo $.
+Las variables pueden ser escalares o arreglos de hasta siete dimensiones. 
+</p><code></code></section>
+
+      </main>
+     
+
+<nav id="navbar"><header><h1>TI BASIC</h1></header>
+<a class="nav-link" href="#convenciones">CONVENCIONES</a>
+<a class="nav-link" href="#ejecucion_de_un_programa_de_encendido">EJECUCION DE UN PROGRAMA DE ENCENDIDO</a>
+<a class="nav-link" href="#archivos">ARCHIVOS</a>
+<a class="nav-link" href="#numeros_de_linea">NUMEROS DE LINEA</a>
+<a class="nav-link" href="#lineas">LINEAS</a>
+<a class="nav-link" href="#simbolos_especiales">SIMBOLOS ESPECIALES</a>
+<a class="nav-link" href="#espacios">ESPACIOS</a>
+<a class="nav-link" href="#constantes_numericas">CONSTANTES NUMERICAS</h2></a>
+<a class="nav-link"href="#constantes_alfanumericas">CONSTANTES ALFANUMERICAS</a>
+<a class="nav-link" href="#variables">VARIABLES</a>
+</nav>
+    </body>
+
+
+
+
+  </html>
